@@ -1,160 +1,335 @@
-# 🤖 AI Chatbot with Streamlit & Groq
+# ⚡ NEURAL INTERFACE - AI Chatbot
 
-A beautiful, minimal AI chatbot built with Streamlit and powered by Groq's ultra-fast LLM inference API.
+A cutting-edge AI chatbot with **hacker-themed neon terminal UI**, powered by Groq's ultra-fast inference and the latest LLM models.
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Streamlit](https://img.shields.io/badge/streamlit-1.31.0-red.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Python](https://img.shields.io/badge/python-3.8+-green.svg)
+![Streamlit](https://img.shields.io/badge/streamlit-1.40.0-red.svg)
+![Groq](https://img.shields.io/badge/groq-latest-blue.svg)
 
 ## ✨ Features
 
-- 🚀 **Lightning-fast responses** using Groq's LPU inference
-- 💬 **Context-aware conversations** with chat history
-- 🎨 **Beautiful gradient UI** with custom theme
-- 🔒 **Secure API key handling** via environment variables
-- ⚙️ **Customizable parameters** (model, temperature, max tokens)
-- 📱 **Responsive design** that works on all devices
+### 🎨 Unique Hacker Theme
+- **Neon terminal aesthetic** with cyan/green glow effects
+- **Matrix-style interface** inspired by cyberpunk films
+- **Animated messages** with smooth transitions
+- **Custom cyberpunk font** (Fira Code, Share Tech Mono)
 
-## 🎯 Demo
+### 🤖 Latest AI Models (2025)
+- `llama-3.3-70b-versatile` - Most capable Llama model
+- `llama-3.3-70b-specdec` - Ultra-fast speculative decoding
+- `llama-3.2-90b-vision-preview` - Vision support for images
+- `mixtral-8x7b-32768` - Long context window (32K tokens)
+- `gemma2-9b-it` - Google's creative model
+- Plus more!
 
-The chatbot supports multiple Groq models:
-- `llama-3.3-70b-versatile` - Most capable model
-- `llama-3.1-8b-instant` - Fast and efficient
-- `mixtral-8x7b-32768` - Great for long contexts
+### 🚀 Advanced Functionality
+- ✅ **Permanent API key storage** (auto-loads from .env)
+- ✅ **Real-time streaming responses**
+- ✅ **Custom system prompts**
+- ✅ **Message timestamps**
+- ✅ **Token counting & statistics**
+- ✅ **Export conversations** (JSON format)
+- ✅ **Reasoning process viewer**
+- ✅ **Advanced parameters** (temperature, top_p, max_tokens)
+- ✅ **Response time metrics**
 
-## 📋 Prerequisites
+### 🔐 Security
+- Environment variable storage
+- Never commit API keys
+- Local-only sensitive data
 
-- Python 3.8 or higher
-- Groq API key (free at [console.groq.com](https://console.groq.com))
-- Git (for version control)
+---
 
-## 🚀 Local Setup
+## 🎯 Screenshots
 
-### Step 1: Clone the Repository
+**Hacker Terminal Interface:**
+```
+◉ NEURAL INTERFACE ◉
+GROQ QUANTUM PROCESSING // REAL-TIME INFERENCE
 
+>> USER:
+[13:37:42] What is quantum computing?
+
+>> ASSISTANT:
+[13:37:43] • Response time: 0.87s
+Quantum computing uses quantum-mechanical phenomena...
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-chatbot.git
+git clone https://github.com/Asad101001/ai-chatbot.git
 cd ai-chatbot
 ```
 
-### Step 2: Create Virtual Environment
-
-**On Windows:**
+### 2. Install Dependencies
 ```bash
 python -m venv venv
-venv\Scripts\activate
-```
-
-**On macOS/Linux:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### Step 3: Install Dependencies
-
-```bash
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Step 4: Set Up Environment Variables
-
-1. Copy the example environment file:
+### 3. Set Up API Key (Permanent)
 ```bash
+# Copy template
 cp .env.example .env
+
+# Edit .env and add your key
+echo "GROQ_API_KEY=your_key_here" > .env
 ```
 
-2. Edit `.env` and add your Groq API key:
-```
-GROQ_API_KEY=your_actual_groq_api_key_here
-```
+Get free key: **https://console.groq.com**
 
-**How to get a Groq API key:**
-1. Visit [https://console.groq.com](https://console.groq.com)
-2. Sign up for a free account
-3. Navigate to "API Keys" section
-4. Click "Create API Key"
-5. Copy the key and paste it in your `.env` file
-
-### Step 5: Run the Application
-
+### 4. Run!
 ```bash
 streamlit run app.py
 ```
 
-The app will automatically open in your browser at `http://localhost:8501`
+---
 
-## 🔧 Configuration
+## 🎛️ Features Breakdown
 
-You can customize the chatbot behavior in the sidebar:
+### Sidebar Controls
 
-- **Model Selection**: Choose between different LLM models
-- **Temperature**: Control randomness (0.0 = focused, 2.0 = creative)
-- **Max Tokens**: Set maximum response length
-- **API Key**: Enter your Groq API key (if not using .env)
+**Model Selection:**
+- 7 latest models including vision support
+- Each with performance indicators
+
+**Advanced Parameters:**
+- 🌡️ Temperature (0-2.0)
+- 📏 Max Tokens (256-8000)
+- 🎲 Top P / Nucleus Sampling (0-1.0)
+
+**System Prompt:**
+- Customize AI personality
+- Define expertise areas
+- Set response style
+
+**Features Toggle:**
+- Show reasoning process
+- Display timestamps
+- Stream responses
+
+**Actions:**
+- 🗑️ Clear chat history
+- 💾 Export conversations (JSON)
+
+### Live Statistics
+- Total messages sent
+- Total tokens used
+- Conversation duration
+
+---
 
 ## 📁 Project Structure
 
 ```
 ai-chatbot/
-├── app.py                 # Main Streamlit application
-├── requirements.txt       # Python dependencies
-├── .env.example          # Environment variables template
-├── .gitignore            # Git ignore rules
-├── README.md             # Project documentation
-└── LICENSE               # MIT License
+├── app.py                  # Main application (hacker theme)
+├── requirements.txt        # Latest dependencies
+├── .env                    # Your API key (create this)
+├── .gitignore              # Security (prevents .env commit)
+└── README.md               # This file
 ```
-
-## 🐳 Alternative: Using OpenAI API
-
-To use OpenAI instead of Groq, modify `app.py`:
-
-1. Replace `from groq import Groq` with `from openai import OpenAI`
-2. Replace `client = Groq(api_key=...)` with `client = OpenAI(api_key=...)`
-3. Update model names to OpenAI models (e.g., "gpt-4", "gpt-3.5-turbo")
-
-## 🚢 Deployment
-
-### Deploy to Streamlit Cloud
-
-1. Push your code to GitHub
-2. Visit [share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub repository
-4. Add your `GROQ_API_KEY` in the Secrets section
-5. Deploy!
-
-### Deploy to Other Platforms
-
-- **Heroku**: Add `setup.sh` and `Procfile`
-- **Railway**: Connect GitHub repo directly
-- **Render**: Use their Streamlit template
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Streamlit](https://streamlit.io/) for the amazing web framework
-- [Groq](https://groq.com/) for ultra-fast LLM inference
-- [Meta AI](https://ai.meta.com/) for the Llama models
-
-## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/YOUR_USERNAME/ai-chatbot](https://github.com/YOUR_USERNAME/ai-chatbot)
 
 ---
 
-**Note**: Keep your API keys secure and never commit them to version control!
+## 🎨 Customization
+
+### Change Colors
+
+Edit CSS in `app.py`:
+```python
+# Current: Cyan/Green neon
+color: #00ff87;  # Change to your color
+text-shadow: 0 0 10px #00ff87;  # Glow effect
+```
+
+**Color Schemes:**
+- **Cyan/Green** (current): `#00ff87`, `#00ffff`
+- **Red/Orange**: `#ff0000`, `#ff6600`
+- **Purple/Pink**: `#8a2be2`, `#ff1493`
+- **Blue/White**: `#00bfff`, `#ffffff`
+
+### Add Your Own Models
+
+```python
+model_info = {
+    "your-model-name": "🎯 Your Model - Description",
+    # Add more...
+}
+```
+
+### Custom System Prompts
+
+Edit default in sidebar section:
+```python
+system_prompt = st.text_area(
+    "Customize AI behavior",
+    value="Your custom prompt here",
+    ...
+)
+```
+
+---
+
+## 🚢 Deployment
+
+### Streamlit Cloud (Free)
+
+1. Push to GitHub
+2. Visit **https://share.streamlit.io**
+3. Connect repository
+4. Add secrets:
+   ```toml
+   GROQ_API_KEY = "your_key_here"
+   ```
+5. Deploy!
+
+### Other Platforms
+- **Railway**: Auto-deploy from GitHub
+- **Render**: Use Streamlit template
+- **Heroku**: Add Procfile
+
+---
+
+## 🔧 Advanced Usage
+
+### Export Conversations
+
+Click **💾 EXPORT** in sidebar:
+```json
+{
+  "timestamp": "2025-02-14T13:37:42",
+  "model": "llama-3.3-70b-versatile",
+  "messages": [...],
+  "stats": {
+    "total_messages": 42,
+    "total_tokens": 15234
+  }
+}
+```
+
+### View Reasoning Process
+
+Enable "Show reasoning process":
+```json
+{
+  "model": "llama-3.3-70b-versatile",
+  "temperature": 0.7,
+  "tokens_used": 523,
+  "response_time": "0.87s",
+  "prompt_length": 45,
+  "response_length": 312
+}
+```
+
+### Streaming Responses
+
+Enable "Stream responses" for real-time output:
+- See text appear word-by-word
+- Lower perceived latency
+- Better UX for long responses
+
+---
+
+## 🆚 Groq vs OpenAI
+
+| Feature | Groq | OpenAI |
+|---------|------|--------|
+| **Speed** | ⚡ Ultra-fast (2-3x faster) | 🐢 Standard |
+| **Cost** | ✅ Free tier | 💰 Pay per token |
+| **Models** | Llama 3.3, Mixtral, Gemma | GPT-4, GPT-3.5 |
+| **Context** | Up to 32K tokens | Up to 128K tokens |
+| **Best For** | Speed, demos, learning | Production, quality |
+
+**Recommendation:** Start with Groq (free + fast), upgrade to OpenAI if needed.
+
+---
+
+## 🐛 Troubleshooting
+
+### API Key Not Loading
+
+```bash
+# Check .env exists
+ls -la | grep .env
+
+# Verify content
+cat .env
+
+# Should show:
+GROQ_API_KEY=gsk_...
+```
+
+### Import Errors
+
+```bash
+# Reinstall dependencies
+pip install -r requirements.txt --upgrade
+```
+
+### Port In Use
+
+```bash
+# Use different port
+streamlit run app.py --server.port 8502
+```
+
+### Streaming Not Working
+
+- Disable "Stream responses" in sidebar
+- Check internet connection
+- Try different model
+
+---
+
+## 🎓 Learning Resources
+
+**Beginner:**
+- Change colors in CSS
+- Try different models
+- Export a conversation
+
+**Intermediate:**
+- Add new models
+- Customize system prompts
+- Modify UI layout
+
+**Advanced:**
+- Add image upload support
+- Implement RAG (document Q&A)
+- Create multi-agent chat
+
+---
+
+## 🙏 Credits
+
+- **Groq** - Ultra-fast LLM inference
+- **Meta AI** - Llama models
+- **Streamlit** - Web framework
+- **Google** - Gemma models
+- **Mistral AI** - Mixtral models
+
+---
+
+## ⚡ Why "Neural Interface"?
+
+Inspired by cyberpunk aesthetics and hacker culture, this interface transforms boring chatbots into an immersive terminal experience. The neon glow, monospace fonts, and dark theme create a futuristic atmosphere perfect for AI interaction.
+
+---
+
+**Built with 💚 by developers who love terminals**
+
+**Questions?** Open an issue on GitHub  
+**Love it?** Star the repo ⭐  
+**Want more?** Check out the features and customize away!
+
+---
+
+```
+◉ SYSTEM READY // NEURAL LINK ESTABLISHED ◉
+```
